@@ -1,0 +1,18 @@
+# --- Core / Training ---
+transformers>=4.44
+datasets>=2.20
+accelerate>=0.33
+peft>=0.12
+bitsandbytes>=0.43      # 4-bit quantization (QLoRA) — สำคัญสำหรับ 8GB
+trl>=0.9                # ตัวช่วย fine-tune (SFTTrainer)
+sentencepiece
+# --- RAG ---
+sentence-transformers>=3.0
+faiss-cpu               # vector DB (cpu พอสำหรับเริ่มต้น)
+langchain>=0.2
+langchain-community
+pypdf                   # อ่าน PDF
+# --- Utils ---
+jupyter
+tensorboard
+pythainlp               # ตัดคำ/จัดการภาษาไทย

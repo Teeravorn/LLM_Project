@@ -1,0 +1,11 @@
+# Modelfile สำหรับ Ollama - ใช้กับโมเดลที่เรา fine-tune + แปลงเป็น GGUF แล้ว
+# สร้างโมเดล:  ollama create my-llm -f phase6/Modelfile
+
+FROM ./my-model.gguf
+
+# ตั้งค่า sampling เริ่มต้น
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+
+# system prompt กำหนดบุคลิกผู้ช่วย
+SYSTEM """คุณเป็นผู้ช่วย AI ที่พูดไทยและอังกฤษได้ ตอบสุภาพ กระชับ ตรงประเด็น"""
